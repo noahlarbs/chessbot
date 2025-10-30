@@ -39,7 +39,7 @@ class IDAI(AlphaBetaAI):
                 ordered_moves = legal_moves
             for move in ordered_moves:
                 board.push(move)
-                v = self.min_value(board, depth - 1, c, alpha, beta)
+                v = self.min_value(board, depth - 1, c, alpha, beta, 1)
                 board.pop()
                 if v > bestVal:
                     bestVal = v
